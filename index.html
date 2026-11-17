@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install nereus</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1b1f24; --muted: #57606a; --code: #f3f4f6; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9da7b3; --code: #161b22; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 44rem; margin: 3rem auto; padding: 0 16px; }
+  pre { background: var(--code); padding: 1rem; border-radius: 6px; overflow-x: auto; }
+  p.muted { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<h1>Install the nereus CLI</h1>
+<p>On Linux (x86_64, aarch64):</p>
+<pre><code>curl -fsSL https://getnereus.github.io/install/install.sh | sh</code></pre>
+<p>It downloads the wheel of the latest release, checks its sha256, installs <a href="https://docs.astral.sh/uv/">uv</a> when it is missing and runs <code>uv tool install</code>. A pinned version: <code>NEREUS_VERSION=0.1.23</code>; every option: <code>sh -s -- --help</code>.</p>
+<p>The CLI upgrades itself in the background; turn it off with <code>NEREUS_AUTO_UPGRADE=off</code> or <code>nereus config set auto_upgrade off</code>.</p>
+<p class="muted"><a href="https://github.com/getnereus/install/releases">Releases</a> · <a href="install.sh">install.sh</a></p>
+</main>
+</body>
+</html>
